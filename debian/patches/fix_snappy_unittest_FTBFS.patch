@@ -1,0 +1,23 @@
+From 89342ecf34894461cc64c9cbe3f8bc0d18df5073 Mon Sep 17 00:00:00 2001
+From: "liangyukun.lyk" <lyk19961210@gmail.com>
+Date: Mon, 27 Aug 2018 18:08:46 +0800
+Subject: [PATCH] fix cmake build error
+
+---
+ CMakeLists.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 41a2124..2a822dd 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -293,6 +293,9 @@ if(SNAPPY_BUILD_TESTS OR SNAPPY_BUILD_BE
+ 
+   target_link_libraries(snappy_test_support snappy)
+ 
++  if(HAVE_GTEST)
++    target_link_libraries(snappy_test_support gtest)
++  endif(HAVE_GTEST)
+   if(HAVE_LIBZ)
+     target_link_libraries(snappy_test_support z)
+   endif(HAVE_LIBZ)

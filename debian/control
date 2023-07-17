@@ -1,0 +1,47 @@
+Source: snappy
+Priority: optional
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper-compat (= 13), cmake, pkgconf,
+ libgtest-dev, libgmock-dev, libbenchmark-dev
+Standards-Version: 4.6.2
+Section: libs
+Homepage: https://google.github.io/snappy/
+
+Package: libsnappy-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libsnappy1v5 (= ${binary:Version}), ${misc:Depends}
+Description: fast compression/decompression library (development files)
+ Snappy is a compression/decompression library. It does not aim for
+ maximum compression, or compatibility with any other compression
+ library; instead, it aims for very high speeds and reasonable
+ compression.
+ .
+ For instance, compared to the fastest mode of zlib, Snappy
+ is an order of magnitude faster for most inputs, but the resulting
+ compressed files are anywhere from 20% to 100% bigger. On a single core
+ of a Core i7 processor in 64-bit mode, Snappy compresses at about 250
+ MB/sec or more and decompresses at about 500 MB/sec or more.
+ .
+ This package contains the development files required to build programs
+ against Snappy.
+
+Package: libsnappy1v5
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: libsnappy1
+Description: fast compression/decompression library
+ Snappy is a compression/decompression library. It does not aim for
+ maximum compression, or compatibility with any other compression
+ library; instead, it aims for very high speeds and reasonable
+ compression.
+ .
+ For instance, compared to the fastest mode of zlib, Snappy
+ is an order of magnitude faster for most inputs, but the resulting
+ compressed files are anywhere from 20% to 100% bigger. On a single core
+ of a Core i7 processor in 64-bit mode, Snappy compresses at about 250
+ MB/sec or more and decompresses at about 500 MB/sec or more.

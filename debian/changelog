@@ -1,0 +1,226 @@
+snappy (1.1.10-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Configure with C++14 standard (closes: #1041028).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 17 Jul 2023 21:07:55 +0200
+
+snappy (1.1.9-3) unstable; urgency=medium
+
+  * Add option to enable rtti, set default to current behavior.
+  * Enable rtti support (closes: 1031394).
+  * Update Standards-Version to 4.6.2 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 16 Feb 2023 20:31:32 +0100
+
+snappy (1.1.9-2) unstable; urgency=medium
+
+  * Upload to Sid.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 08 May 2022 20:26:22 +0200
+
+snappy (1.1.9-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update watch file.
+  * Update copyright file.
+  * Update debhelper level to 13 .
+  * Update Standards-Version to 4.6.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 04 Dec 2021 19:21:57 +0100
+
+snappy (1.1.8-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update patches.
+  * Update Standards-Version to 4.5.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Mon, 27 Jan 2020 20:19:20 +0000
+
+snappy (1.1.7-2) unstable; urgency=medium
+
+  * Fix snappy_unittest FTBFS.
+  * Add watch file.
+  * Update debhelper level to 12:
+    - don't specify parallel to debhelper.
+  * Update homepage location.
+  * Update Standards-Version to 4.4.1:
+    - change package priority to optional.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Thu, 05 Dec 2019 19:18:14 +0000
+
+snappy (1.1.7-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update patches.
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 05 Sep 2017 17:17:21 +0000
+
+snappy (1.1.6-4) unstable; urgency=medium
+
+  * Correct libsnappy-shared.a symlink target (closes: #872226).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sun, 20 Aug 2017 15:42:23 +0000
+
+snappy (1.1.6-3) unstable; urgency=medium
+
+  [ Niclas Rosenvik ]
+  * Readd pkgconfig support (closes: #871437).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Tue, 08 Aug 2017 11:06:59 +0000
+
+snappy (1.1.6-2) unstable; urgency=medium
+
+  * Patch to build static library (closes: #868605).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 22 Jul 2017 07:26:07 +0000
+
+snappy (1.1.6-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch to short debhelper rules format.
+  * Switch to CMake build system.
+  * Force CMake build until autoconf build still exists.
+  * Specify CMAKE_BUILD_TYPE to RelWithDebInfo.
+  * Patch CMake to multiarch library install.
+  * Install CMake files.
+  * Enable parallel building.
+  * Update Standards-Version to 4.0.0 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 15 Jul 2017 07:57:57 +0000
+
+snappy (1.1.4-3) unstable; urgency=medium
+
+  [ Steve Langasek <steve.langasek@canonical.com> ]
+  * Use pristine upstream git source that works on armhf (closes: #866188).
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Wed, 28 Jun 2017 15:35:33 +0000
+
+snappy (1.1.4-2) unstable; urgency=low
+
+  * New maintainer (closes: #863946).
+  * Update Standards-Version to 3.9.8 and debhelper level to 10 .
+
+ -- Laszlo Boszormenyi (GCS) <gcs@debian.org>  Sat, 17 Jun 2017 06:32:45 +0000
+
+snappy (1.1.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Fri, 27 Jan 2017 22:02:08 +0100
+
+snappy (1.1.3-3) unstable; urgency=low
+
+  * Build a convenience library libsnappy-shared.a, which is suitable for
+    linking into a shared library. (Closes: #748627)
+  * Change the download URL in debian/copyright to point to GitHub instead of
+    Google Code, since upstream moved.
+  * Update Standards-Version to 3.9.7 (no changes needed).
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sat, 19 Mar 2016 14:38:04 +0100
+
+snappy (1.1.3-2) unstable; urgency=medium
+
+  * Change package name to libsnappy1v5 for rebuild with g++-5.0 with the
+    C++11 ABI; conflict with libsnappy1. (Closes: #791289, #794993)
+  * Switch Debian packaging to the 3.0 (quilt) format.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sun, 09 Aug 2015 12:07:46 +0200
+
+snappy (1.1.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update Homepage: field in debian/control to reflect that Snappy is now
+    distributed through GitHub.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Tue, 14 Jul 2015 15:18:14 +0200
+
+snappy (1.1.2-4) unstable; urgency=low
+
+  * Make package multi-arch capable; patch from Mathieu Malaterre.
+    (Closes: #775409)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Thu, 15 Jan 2015 23:12:50 +0100
+
+snappy (1.1.2-3) unstable; urgency=medium
+
+  * Add missing build-dependency on pkg-config, which is needed when we
+    run autoreconf as part of the build; fixes FTBFS. (Closes: #756798)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sat, 02 Aug 2014 14:04:34 +0300
+
+snappy (1.1.2-2) unstable; urgency=medium
+
+  * Use dh-autoreconf instead of managing config.sub and config.guess
+    ourselves; fixes FTBFS on ppc64el. Patch from Fernando Seiti Furusato.
+    (Closes: #755933)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Thu, 24 Jul 2014 21:33:36 +0200
+
+snappy (1.1.2-1) unstable; urgency=high
+
+  * New upstream release.
+    * Removes some test data that have unclear licensing, and which thus may
+      violate the DFSG.
+    * urgency=high due to the previous point.
+  * Update to Standards-Version 3.9.5 (no changes needed).
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Wed, 09 Apr 2014 23:29:53 +0200
+
+snappy (1.1.0-1) unstable; urgency=low
+
+  * New upstream release.
+    * Fixes divide by zero in unit test when run on platforms with
+      very imprecise gettimeofday(). (Closes: #699419)
+  * Do not run make check at build time if DEB_BUILD_OPTIONS contains
+    nocheck.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Sun, 10 Mar 2013 17:03:33 +0900
+
+snappy (1.0.5-2) unstable; urgency=low
+
+  * Disable unaligned accesses on ARMv4, not just ARMv5 and ARMv6.
+    Fixes unit test segfaults and subsequent FTBFS on armel.
+    (Closes: #679964)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Mon, 02 Jul 2012 19:30:10 +0200
+
+snappy (1.0.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Use standard build flags from dpkg-buildflags, to get hardening etc.
+    (also, at some point our previous setup started to give no optimization,
+    which is not very good).
+    * Build-Depend on dpkg-dev >= 1.61.1~.
+  * Add dummy build-indep and build-arch targets (both just depend on build).
+  * Upgrade to Standards-Version 3.9.3 (no changes needed).
+  * Minor tweak to debian/copyright to make lintian happy.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Thu, 29 Mar 2012 14:12:12 +0000
+
+snappy (1.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Thu, 15 Sep 2011 21:39:31 +0200
+
+snappy (1.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated Standards-Version to 3.9.2. (No changes needed.)
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Fri, 03 Jun 2011 01:08:08 +0200
+
+snappy (1.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+    * Update debian/copyright with new license (upstream changed from
+      the Apache2 license to a BSD-style license).
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Fri, 29 Apr 2011 00:13:12 +0200
+
+snappy (1.0.1-1) unstable; urgency=low
+
+  * Initial release.
+
+ -- Steinar H. Gunderson <sesse@debian.org>  Fri, 25 Mar 2011 01:44:25 +0100

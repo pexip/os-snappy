@@ -1,0 +1,6 @@
+build_static_lib.patch
+readd_pkgconfig_support.patch
+fix_snappy_unittest_FTBFS.patch
+use_packaged_testing.patch
+correct_testing_link.patch
+add_option_to_enable_rtti.patch
