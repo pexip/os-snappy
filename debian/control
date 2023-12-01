@@ -1,11 +1,13 @@
 Source: snappy
 Priority: optional
-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Build-Depends: debhelper-compat (= 13), cmake, pkgconf,
  libgtest-dev, libgmock-dev, libbenchmark-dev
 Standards-Version: 4.6.2
 Section: libs
 Homepage: https://google.github.io/snappy/
+XS-Pexip-Upstream: http://deb.debian.org/debian/ trixie
 
 Package: libsnappy-dev
 Section: libdevel
