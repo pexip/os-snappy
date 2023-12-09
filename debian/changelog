@@ -1,3 +1,9 @@
+snappy (1.1.10-1pexip2) pexip-bookworm; urgency=medium
+
+  * Bookworm build for product distribution
+
+ -- Mark Hymers <mark.hymers@pexip.com>  Sat, 09 Dec 2023 22:58:43 +0000
+
 snappy (1.1.10-1pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
