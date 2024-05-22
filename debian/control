@@ -3,8 +3,9 @@ Priority: optional
 Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Build-Depends: debhelper-compat (= 13), cmake, pkgconf,
  libgtest-dev, libgmock-dev, libbenchmark-dev
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Section: libs
+Rules-Requires-Root: no
 Homepage: https://google.github.io/snappy/
 
 Package: libsnappy-dev
