@@ -3,13 +3,13 @@ Description: googletest and gmock are packaged, use those
  ones.
 Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
 Forwarded: not-needed
-Last-Update: 2021-12-04
+Last-Update: 2024-05-01
 
 ---
 
---- snappy-1.1.9.orig/CMakeLists.txt
-+++ snappy-1.1.9/CMakeLists.txt
-@@ -322,15 +322,15 @@ if(SNAPPY_BUILD_TESTS)
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -357,20 +357,20 @@ if(SNAPPY_BUILD_TESTS)
    set(build_gmock ON)
  
    # This project is tested using GoogleTest.
@@ -23,16 +23,26 @@ Last-Update: 2021-12-04
 -    set_property(TARGET gmock
 -        APPEND PROPERTY COMPILE_OPTIONS -Wno-missing-field-initializers)
 -  endif(SNAPPY_HAVE_NO_MISSING_FIELD_INITIALIZERS)
+-
+-  if(SNAPPY_HAVE_NO_IMPLICIT_INT_FLOAT_CONVERSION)
+-    set_property(TARGET gtest
+-        APPEND PROPERTY COMPILE_OPTIONS -Wno-implicit-int-float-conversion)
+-  endif(SNAPPY_HAVE_NO_IMPLICIT_INT_FLOAT_CONVERSION)
 +  #  if(SNAPPY_HAVE_NO_MISSING_FIELD_INITIALIZERS)
 +  #    set_property(TARGET gtest
 +  #        APPEND PROPERTY COMPILE_OPTIONS -Wno-missing-field-initializers)
 +  #    set_property(TARGET gmock
 +  #        APPEND PROPERTY COMPILE_OPTIONS -Wno-missing-field-initializers)
 +  #  endif(SNAPPY_HAVE_NO_MISSING_FIELD_INITIALIZERS)
++
++  #  if(SNAPPY_HAVE_NO_IMPLICIT_INT_FLOAT_CONVERSION)
++  #    set_property(TARGET gtest
++  #        APPEND PROPERTY COMPILE_OPTIONS -Wno-implicit-int-float-conversion)
++  #  endif(SNAPPY_HAVE_NO_IMPLICIT_INT_FLOAT_CONVERSION)
  
    add_executable(snappy_unittest "")
    target_sources(snappy_unittest
-@@ -363,7 +363,7 @@ if(SNAPPY_BUILD_BENCHMARKS)
+@@ -403,7 +403,7 @@ if(SNAPPY_BUILD_BENCHMARKS)
    # This project uses Google benchmark for benchmarking.
    set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "" FORCE)
    set(BENCHMARK_ENABLE_EXCEPTIONS OFF CACHE BOOL "" FORCE)

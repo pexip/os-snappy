@@ -24,7 +24,7 @@ index 6eef485c..aefd35bc 100644
  else(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
    # Use -Wall for clang and gcc.
    if(NOT CMAKE_CXX_FLAGS MATCHES "-Wall")
-@@ -78,8 +80,10 @@ else(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+@@ -83,8 +85,10 @@ else(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-exceptions")
  
    # Disable RTTI.
@@ -37,7 +37,7 @@ index 6eef485c..aefd35bc 100644
  endif(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
  
  # BUILD_SHARED_LIBS is a standard CMake variable, but we declare it here to make
-@@ -98,6 +102,8 @@ option(SNAPPY_REQUIRE_AVX2 "Target processors with AVX2 support." OFF)
+@@ -103,6 +107,8 @@ option(SNAPPY_REQUIRE_AVX2 "Target processors with AVX2 support." OFF)
  
  option(SNAPPY_INSTALL "Install Snappy's header and library" ON)
  

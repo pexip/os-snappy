@@ -6,9 +6,9 @@ Last-Update: 2021-12-04
 
 ---
 
---- snappy-1.1.9.orig/CMakeLists.txt
-+++ snappy-1.1.9/CMakeLists.txt
-@@ -337,7 +337,7 @@ if(SNAPPY_BUILD_TESTS)
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -377,7 +377,7 @@ if(SNAPPY_BUILD_TESTS)
      PRIVATE
        "snappy_unittest.cc"
    )
@@ -17,7 +17,7 @@ Last-Update: 2021-12-04
  
    add_test(
      NAME snappy_unittest
-@@ -358,7 +358,7 @@ if(SNAPPY_BUILD_BENCHMARKS)
+@@ -398,7 +398,7 @@ if(SNAPPY_BUILD_BENCHMARKS)
      PRIVATE
        "snappy_benchmark.cc"
    )
